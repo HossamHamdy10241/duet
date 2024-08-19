@@ -1,10 +1,10 @@
 export class Player {
   angel = 0;
-  radius = 90;
+  radius = 110;
   game: any;
   x: number;
   y: number;
-  ballSize = 16;
+  ballSize = 19;
   constructor(game: any) {
     this.game = game;
     this.x = this.game.w / 2;
@@ -50,11 +50,11 @@ export class Player {
   update(){
     let key = this.game.key
     if (key.ArrowLeft==true) {
-        this.angel -= 0.05;
+        this.angel -= this.game.rotSpeed
 
     }
     if (key.ArrowRight == true) {
-        this.angel += 0.05;
+        this.angel += this.game.rotSpeed;
     }
   }
 }
